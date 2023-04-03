@@ -52,7 +52,7 @@ const getAllVideoGames = async () => {
 
   const apiVideoGameRaw = (
     await axios.get(
-      "https://api.rawg.io/api/games?key=c592a6054e1b495c85ee3ef3af87c260"
+      `https://api.rawg.io/api/games?key=${API_KEY}`
     )
   ).data.results;
 
@@ -94,7 +94,7 @@ const searchVideoGameByName = async (name) => {
 
   const apiVideoGameByName = (
     await axios.get(
-      `https://api.rawg.io/api/games?key=c592a6054e1b495c85ee3ef3af87c260&search=${name}`
+      `https://api.rawg.io/api/games?key=${API_KEY}&search=${name}`
     )
   ).data.results;
 
